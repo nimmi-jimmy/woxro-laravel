@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CareerController;
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post("register",[UserController::class,'register']);
+
+Route::post("career",[CareerController::class,'career']);
+
+Route::post("blog",[BlogController::class,'blog']);
 
 Route::post("login",[UserController::class,'login']);
